@@ -4,7 +4,11 @@ import path from 'node:path';
 import { URL, fileURLToPath } from 'node:url';
 import ora from 'ora';
 import puppeteer from 'puppeteer';
+import { SitemapStream } from 'sitemap';
 import TurndownService from 'turndown';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const turndownService = new TurndownService({
   codeBlockStyle: 'fenced',
@@ -81,17 +85,30 @@ async function getSiteMap(urlPath) {
   });
   await browser.close();
   const currentHost = new URL(urlPath).host;
-  return urls.filter((url) => new URL(url).host === currentHost);
+  const urlSet = new Set();
+  urls.forEach((url) => {
+    const urlObj = new URL(url);
+    if (urlObj.host === currentHost) {
+      urlObj.hash = '';
+      urlSet.add(urlObj.toString());
+    }
+  });
+  return Array.from(urlSet);
 }
 
 /**
  * 获得整个网站的 markdown 内容
  * @param {string} urlPath
- * @param {string} outputPath
+ * @param {string} key
  * @returns
  */
-async function getMarkdownBySiteMap(urlPath, outputPath) {
+async function getMarkdownBySiteMap(urlPath, key) {
+  const outputPath = path.resolve(__dirname, 'docs', key);
   const siteMap = await getSiteMap(urlPath);
+  const sitemap = new SitemapStream({ hostname: 'https://cdn.jsdelivr.net/gh/baranwang/surge-knowledge/' });
+  const sitemapPath = path.resolve(__dirname, 'sitemap', `${key}.xml`);
+  const writeStream = fs.createWriteStream(sitemapPath);
+  sitemap.pipe(writeStream);
   for (const url of siteMap) {
     const spinner = ora(`正在下载 ${url}`).start();
     try {
@@ -111,21 +128,21 @@ async function getMarkdownBySiteMap(urlPath, outputPath) {
         fs.mkdirSync(dir, { recursive: true });
       }
       fs.writeFileSync(filePath, md);
+      sitemap.write({ url: path.relative(__dirname, filePath) });
     } catch (error) {
       spinner.fail(`下载 ${url} 失败`);
       console.error(error);
     }
   }
+  sitemap.end();
 }
 
 (async () => {
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
   await Promise.allSettled(
     Object.entries({
       manual: 'https://manual.nssurge.com/',
       understanding: 'https://manual.nssurge.com/book/understanding-surge/en/',
       'knowledge-base': 'https://kb.nssurge.com/surge-knowledge-base',
-    }).map(([key, url]) => getMarkdownBySiteMap(url, path.resolve(__dirname, 'docs', key)))
+    }).map(([key, url]) => getMarkdownBySiteMap(url, key))
   );
 })();

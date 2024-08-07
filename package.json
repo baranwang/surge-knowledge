@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.mjs",
   "scripts": {
-    "build": "node index.mjs && node sitemap.mjs"
+    "build": "node index.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^4.4.1",
