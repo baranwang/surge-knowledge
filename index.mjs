@@ -98,6 +98,9 @@ async function getMarkdownBySiteMap(urlPath, outputPath) {
         pathname += 'index';
       }
       let filePath = path.join(outputPath, path.relative(new URL(urlPath).pathname, pathname));
+      if (filePath.endsWith('.html')) {
+        filePath = filePath.replace('.html', '');
+      }
       filePath += '.md';
       const dir = path.dirname(filePath);
       const md = await getMarkdownByPath(url);
