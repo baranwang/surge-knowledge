@@ -6,7 +6,9 @@ import ora from 'ora';
 import puppeteer from 'puppeteer';
 import TurndownService from 'turndown';
 
-const turndownService = new TurndownService();
+const turndownService = new TurndownService({
+  codeBlockStyle: 'fenced',
+});
 const xmlParser = new XMLParser();
 
 /**
