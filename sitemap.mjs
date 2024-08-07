@@ -36,7 +36,7 @@ function getAllFiles(dir, fileList = []) {
   sites.forEach((site) => {
     const siteDir = path.resolve(docsBaseDir, site);
     const files = getAllFiles(siteDir).map((file) => path.relative(__dirname, file));
-    const sitemap = new SitemapStream({ hostname: 'https://github.com/baranwang/surge-knowledge/raw/main/' });
+    const sitemap = new SitemapStream({ hostname: 'https://testingcf.jsdelivr.net/gh/baranwang/surge-knowledge@main/' });
     files.forEach((file) => {
       sitemap.write({ url: file });
     });
