@@ -25,6 +25,7 @@ jobs:
         run: npm ci
 
       - name: Build
+        timeout-minutes: 60
         run: npm run build
 
       - name: Check Changes
