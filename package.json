@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.mjs",
   "scripts": {
-    "build": "node index.mjs"
+    "build": "node index.mjs && node sitemap.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^4.4.1",
     "ora": "^8.0.1",
     "puppeteer": "^22.15.0",
+    "sitemap": "^8.0.0",
     "turndown": "^7.2.0"
   }
 }
