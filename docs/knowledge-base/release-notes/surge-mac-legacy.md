@@ -1453,8 +1453,10 @@ Version 3.2.0
 
 Copy
 
-    [MITM]
-    hostname = -*.apple.com, -*.icloud.com, *
+```
+[MITM]
+hostname = -*.apple.com, -*.icloud.com, *
+```
 
 *   MitM hostname list now supports port number. By default only the connections to port 443 will be decrypted. Use suffix :port to enable MitM for other ports. Use suffix :0 to enable MitM for all ports on the hostname.
     

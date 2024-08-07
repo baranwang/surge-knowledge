@@ -9,17 +9,19 @@ You may use the [subnet expression](../rule/subnet.html) to match specified netw
 
 Suspend Surge temporarily under specified networks.
 
-    [SSID Setting]
-    SSID:MyHome suspend=true
-    
+```
+[SSID Setting]
+SSID:MyHome suspend=true
+```
 
 ### Cellular Fallback (iOS Only)
 
 Control the Wi-Fi assist and Hybrid Network Behaviour for specified Wi-Fi networks.
 
-    [SSID Setting]
-    SSID:MyHome cellular-fallback=off
-    
+```
+[SSID Setting]
+SSID:MyHome cellular-fallback=off
+```
 
 *   `cellular-fallback=default` Use the global Wi-Fi assist and Hybrid Network settings.
 *   `cellular-fallback=off` Turn off Wi-Fi assist and Hybrid Network for the network.
@@ -28,9 +30,10 @@ Control the Wi-Fi assist and Hybrid Network Behaviour for specified Wi-Fi networ
 
 ### TCP Fast Open Behaviour
 
-    [SSID Setting]
-    SSID:MyHome tfo-behaviour=force-enabled
-    
+```
+[SSID Setting]
+SSID:MyHome tfo-behaviour=force-enabled
+```
 
 *   `tfo-behaviour=auto` Use the default TFO behaviour.
 *   `tfo-behaviour=force-disabled` Disable TFO for the network completely.
@@ -40,11 +43,14 @@ Control the Wi-Fi assist and Hybrid Network Behaviour for specified Wi-Fi networ
 
 Override the DNS settings for specified networks.
 
-    [SSID Setting]
-    SSID:MyHome dns-server=8.8.8.8,encrypted-dns-server=https://1.1.1.1/
-    
+```
+[SSID Setting]
+SSID:MyHome dns-server=8.8.8.8,encrypted-dns-server=https://1.1.1.1/
+```
 
 If the encrypted DNS is configured in the global DNS settings. You must explicitly input the keyword `off` below to use the traditional DNS.
 
-    [SSID Setting]
-    SSID:MyHome dns-server=8.8.8.8,encrypted-dns-server=off
+```
+[SSID Setting]
+SSID:MyHome dns-server=8.8.8.8,encrypted-dns-server=off
+```

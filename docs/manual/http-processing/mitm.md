@@ -7,12 +7,13 @@ The certificate generator can help you generate a new CA certificate for debuggi
 
 You can also use an existing CA certificate. Export the certificate to PKCS#12 format (.p12) with a passphrase. Please note that the passphrase cannot be empty due to system limitations. Use the "base64" command to encode in the base64 string and append these settings below to your config file.
 
-    [MITM]
-    ca-p12 = MIIJtQ.........
-    ca-passphrase = password
-    hostname = *google.com
-    h2 = true
-    
+```
+[MITM]
+ca-p12 = MIIJtQ.........
+ca-passphrase = password
+hostname = *google.com
+h2 = true
+```
 
 Surge only decrypts traffic to hosts declared here. A general configuration may be like this:
 

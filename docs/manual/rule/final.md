@@ -5,13 +5,14 @@ The FINAL rule must be written after all other rules. It defines the default pol
 
 Example:
 
-    [Rule]
-    DOMAIN-SUFFIX,company.com,ProxyA
-    DOMAIN-KEYWORD,google,DIRECT
-    GEOIP,US,DIRECT
-    IP-CIDR,192.168.0.0/16,DIRECT
-    FINAL,ProxyB
-    
+```
+[Rule]
+DOMAIN-SUFFIX,company.com,ProxyA
+DOMAIN-KEYWORD,google,DIRECT
+GEOIP,US,DIRECT
+IP-CIDR,192.168.0.0/16,DIRECT
+FINAL,ProxyB
+```
 
 ### Options
 

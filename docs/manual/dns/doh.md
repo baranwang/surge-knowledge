@@ -11,25 +11,28 @@ Supported Protocol:
 
 ### Use Encrypted DNS for All Domains
 
-    [General]
-    encrypted-dns-server = https://8.8.8.8/dns-query
-    
+```
+[General]
+encrypted-dns-server = https://8.8.8.8/dns-query
+```
 
 You may specify multiple encrypted servers here, separated by commas.
 
 ### Use Encrypted DNS for Specified Domains
 
-    [Host]
-    example.com = server:https://cloudflare-dns.com/dns-query
-    
+```
+[Host]
+example.com = server:https://cloudflare-dns.com/dns-query
+```
 
 ### Use Encrypted DNS with Proxy
 
 If you want to query DoH servers through a proxy, you can set `encrypted-dns-follow-outbound-mode` to true.
 
-    [General]
-    encrypted-dns-follow-outbound-mode=true
-    
+```
+[General]
+encrypted-dns-follow-outbound-mode=true
+```
 
 All the encrypted DNS connections will follow the outbound mode settings. Then configure a rule for the DoH hostname to use a proxy.
 

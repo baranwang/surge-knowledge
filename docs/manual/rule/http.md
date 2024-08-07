@@ -5,8 +5,9 @@ There are two HTTP rule types. HTTP rule is for HTTP requests or HTTPS requests.
 
 #### USER-AGENT
 
-    USER-AGENT,Instagram*,DIRECT
-    
+```
+USER-AGENT,Instagram*,DIRECT
+```
 
 Rule matches if the user agent of the request matches. Wildcard characters \* and ? are supported.
 

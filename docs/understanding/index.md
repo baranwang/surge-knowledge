@@ -297,10 +297,12 @@ Note that due to restrictions in the Darwin kernel, the selected NIC must have a
 
 For example, if you are connected to both a wired and wireless network, we can see with the netstat -rn command that both cards, en0 and en1, have default full-coverage routing table entries, but with different priorities.
 
-    Internet:
-    Destination        Gateway            Flags        Netif Expire
-    default            192.168.20.1       UGSc           en0
-    default            192.168.20.1       UGScI          en1
+```
+Internet:
+Destination        Gateway            Flags        Netif Expire
+default            192.168.20.1       UGSc           en0
+default            192.168.20.1       UGScI          en1
+```
 
 In this case, you can use the direct policy to freely select en0 or en1.
 
@@ -310,11 +312,13 @@ A very small coverage routing table is added after some VPN connection establish
 
 However, if enhanced mode is enabled, since Surge’s VIF has been configured as the default route, the egress connection will be forced to bind to the original default card, ignoring the routing table, in order to originate the connection from the local physical NIC. This will cause the VPN’s intranet routing table failing to work, which can be solved by forcing the VPN’s utun device to bind using the direct type policy.
 
-    [Proxy]
-    CorpVPN = direct, interface=utun1, allow-other-interface=true
-    
-    [Rule]
-    DOMAIN-SUFFIX,internal.corp.com,CorpVPN
+```
+[Proxy]
+CorpVPN = direct, interface=utun1, allow-other-interface=true
+
+[Rule]
+DOMAIN-SUFFIX,internal.corp.com,CorpVPN
+```
 
 #### 4.2.2.2 external type (Surge Mac only)
 
@@ -449,7 +453,9 @@ RULE-SET can contain all types of sub-rules, with no difference in execution eff
 
 All rule types can be combined by using AND, OR, NOT operations. For example:
 
-    AND,((PROCESS-NAME,Google Chrome),(PROTOCOL,UDP)),REJECT
+```
+AND,((PROCESS-NAME,Google Chrome),(PROTOCOL,UDP)),REJECT
+```
 
 UDP packets sent by Chrome can be dropped.
 

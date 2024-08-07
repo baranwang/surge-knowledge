@@ -6,25 +6,28 @@ You may use HTTP API to control Surge.
 Configuration
 -------------
 
-    [General]
-    http-api = examplekey@0.0.0.0:6171
-    http-api-tls = false
-    
+```
+[General]
+http-api = examplekey@0.0.0.0:6171
+http-api-tls = false
+```
 
 Authentication
 --------------
 
 The API key must be filled in the 'X-Key' header for all requests.
 
-    GET /v1/events
-    X-Key: examplekey
-    Accept: */*
-    
+```
+GET /v1/events
+X-Key: examplekey
+Accept: */*
+```
 
 In some specific situations, if it is not convenient to set the header, you can also pass it through the URL query. For example, directly downloading the CA certificate through a browser.
 
-    http://127.0.0.1:6171/v1/mitm/ca?x-key=examplekey
-    
+```
+http://127.0.0.1:6171/v1/mitm/ca?x-key=examplekey
+```
 
 HTTPS(TLS)
 ----------
@@ -63,15 +66,17 @@ Use GET method to obtain the state of a capability.
 
 GET Response example:
 
-    {"enabled":true}
-    
+```
+{"enabled":true}
+```
 
 Use POST method to adjust the state of a capability.
 
 POST Request example:
 
-    {"enabled":true}
-    
+```
+{"enabled":true}
+```
 
 ### Outbound Mode
 
@@ -82,13 +87,15 @@ Use GET to obtain the outbound mode, and use POST to change it.
 
 GET Response example:
 
-    {"mode":"rule"}
-    
+```
+{"mode":"rule"}
+```
 
 POST Request example:
 
-    {"mode":"rule"}
-    
+```
+{"mode":"rule"}
+```
 
 Possible modes: direct, proxy, rule
 
@@ -99,13 +106,15 @@ Obtain or change the default policy for global outbound mode.
 
 GET Response example:
 
-    {"policy":"ProxyA"}
-    
+```
+{"policy":"ProxyA"}
+```
 
 POST Request example:
 
-    {"policy":"ProxyB"}
-    
+```
+{"policy":"ProxyB"}
+```
 
 ### Proxy Policy
 
@@ -123,8 +132,9 @@ Test policies with a URL.
 
 Request example:
 
-    {"policy_names": ["ProxyA", "ProxyB"], "url": "http://bing.com"}
-    
+```
+{"policy_names": ["ProxyA", "ProxyB"], "url": "http://bing.com"}
+```
 
 *   GET /v1/policy\_groups
 
@@ -140,8 +150,9 @@ Obtain the option of a select group.
 
 Response example:
 
-    {"policy": "ProxyA"}
-    
+```
+{"policy": "ProxyA"}
+```
 
 *   POST /v1/policy\_groups/select
 
@@ -149,8 +160,9 @@ Change the option of a select group.
 
 Request example:
 
-    {"group_name": "GroupA", "policy": "ProxyA"}
-    
+```
+{"group_name": "GroupA", "policy": "ProxyA"}
+```
 
 *   POST /v1/policy\_groups/test
 
@@ -158,18 +170,20 @@ Test a group immediately.
 
 Request example:
 
-    {"group_name": "GroupA"}
-    
+```
+{"group_name": "GroupA"}
+```
 
 Response example:
 
-    {
-        "available": [
-            "ProxyA",
-            "ProxyB"
-        ],
-    }
-    
+```
+{
+    "available": [
+        "ProxyA",
+        "ProxyB"
+    ],
+}
+```
 
 ### Requests
 
@@ -187,8 +201,9 @@ Kill an active request.
 
 Request example:
 
-    {"id": 100}
-    
+```
+{"id": 100}
+```
 
 ### Profiles
 
@@ -204,8 +219,9 @@ Execute profile reloading immediately.
 
 Request example:
 
-    {"name": "Profile2"}
-    
+```
+{"name": "Profile2"}
+```
 
 Switch to another profile.
 
@@ -217,8 +233,9 @@ Get all available profile names.
 
 Request example:
 
-    {"name": "Profile2"}
-    
+```
+{"name": "Profile2"}
+```
 
 Check the profile. If the profile is invalid an error will be returned. Otherwise the "error" field will be null.
 
@@ -245,18 +262,19 @@ List the available and enabled modules.
 
 Response example:
 
-    {
-        "enabled": [
-            "router.com"
-        ],
-        "available": [
-            "Game Console SNAT",
-            "Google Home Devices",
-            "router.com",
-            "MitM All Hostnames"
-        ]
-    }
-    
+```
+{
+    "enabled": [
+        "router.com"
+    ],
+    "available": [
+        "Game Console SNAT",
+        "Google Home Devices",
+        "router.com",
+        "MitM All Hostnames"
+    ]
+}
+```
 
 *   POST /v1/modules
 
@@ -264,11 +282,12 @@ Enable or disable modules.
 
 Request example:
 
-    {
-        "router.com": false,
-        "Google Home Devices": true
-    }
-    
+```
+{
+    "router.com": false,
+    "Google Home Devices": true
+}
+```
 
 ### Scripting
 
@@ -282,12 +301,13 @@ Evaluate a script with a mock environment.
 
 Request example:
 
-    {
-        "script_text": "The content of JS script",
-        "mock_type": "cron",
-        "timeout": 5
-    }
-    
+```
+{
+    "script_text": "The content of JS script",
+    "mock_type": "cron",
+    "timeout": 5
+}
+```
 
 *   POST /v1/scripting/cron/evaluate
 
@@ -295,10 +315,11 @@ Evaluate a cron script immediately.
 
 Request example:
 
-    {
-        "script_name": "script1",
-    }
-    
+```
+{
+    "script_name": "script1",
+}
+```
 
 ### Device Management Mac Only 4.0.6+
 
@@ -316,13 +337,14 @@ Change the device properties. `physicalAddress` field is required. And you may a
 
 Request example:
 
-    {
-        "physicalAddress":"F0:9F:C2:00:00:00",
-        "name": "Computer",
-        "address": "192.168.1.200",
-        "shouldHandledBySurge": true
-    }
-    
+```
+{
+    "physicalAddress":"F0:9F:C2:00:00:00",
+    "name": "Computer",
+    "address": "192.168.1.200",
+    "shouldHandledBySurge": true
+}
+```
 
 ### Misc
 
@@ -348,8 +370,9 @@ Change the log level for the current session.
 
 Request example:
 
-    {"level": "verbose"}
-    
+```
+{"level": "verbose"}
+```
 
 *   GET /v1/mitm/ca
 

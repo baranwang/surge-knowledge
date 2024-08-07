@@ -47,9 +47,10 @@ Never try to set up connections with the cellular network if the Wi-Fi is availa
 
 The built-in policies can be used in rules and policy groups directly. You can also define an alias in the proxy section.
 
-    [Proxy]
-    On = direct
-    Off = reject
-    
+```
+[Proxy]
+On = direct
+Off = reject
+```
 
 Then you can use 'On' and 'Off' as policy names in rules and policy groups.

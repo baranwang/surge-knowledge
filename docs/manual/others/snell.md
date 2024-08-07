@@ -23,9 +23,10 @@ You can download the standalone server binary from here:
 
 The latest version is v4, which is not compatible with the previous versions like before. Please upgrade both the client (Surge iOS & Surge Mac) and the server binary.
 
-    [Proxy]
-    Proxy = snell, 1.2.3.4, 6333, psk=RANDOM_KEY_HERE, version=4
-    
+```
+[Proxy]
+Proxy = snell, 1.2.3.4, 6333, psk=RANDOM_KEY_HERE, version=4
+```
 
 Release Notes
 -------------
@@ -39,10 +40,11 @@ Surge Mac as Snell Proxy Server
 
 You may also use Surge Mac as a Snell proxy server (Starting from version 3.1.0). Add the following lines to your profile.
 
-    [Snell Server]
-    interface = 0.0.0.0
-    port = 6160
-    psk = RANDOM_KEY_HERE
-    
+```
+[Snell Server]
+interface = 0.0.0.0
+port = 6160
+psk = RANDOM_KEY_HERE
+```
 
 The embedded Snell server in Surge uses the Snell V1 protocol.

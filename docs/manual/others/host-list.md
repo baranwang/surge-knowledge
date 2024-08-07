@@ -28,5 +28,7 @@ Taking the `force-http-engine-hosts` parameter as an example:
 
 When configuring the hostname for MITM, if you want to decrypt all HTTPS connections but exclude those well-known hostnames that cannot be decrypted due to certificate pinning, you can write it like this:
 
-    [MITM]
-    hostname = -*icloud*, -*.mzstatic.com, -*.facebook.com, -*.instagram.com, -*.twitter.com, -*dropbox*, -*apple*, -*.amazonaws.com, -<ip-address>, *
+```
+[MITM]
+hostname = -*icloud*, -*.mzstatic.com, -*.facebook.com, -*.instagram.com, -*.twitter.com, -*dropbox*, -*apple*, -*.amazonaws.com, -<ip-address>, *
+```

@@ -8,12 +8,13 @@ You may use JavaScript to extend the ability of Surge as you wish.
 Script Section
 --------------
 
-    [Script]
-    script1 = type=http-response,pattern=^http://www.example.com/test,script-path=test.js,max-size=16384,debug=true
-    script2 = type=cron,cronexp="* * * * *",script-path=fired.js
-    script3 = type=http-request,pattern=^http://httpbin.org,script-path=http-request.js,max-size=16384,debug=true,requires-body=true
-    script4 = type=dns,script-path=dns.js,debug=true
-    
+```
+[Script]
+script1 = type=http-response,pattern=^http://www.example.com/test,script-path=test.js,max-size=16384,debug=true
+script2 = type=cron,cronexp="* * * * *",script-path=fired.js
+script3 = type=http-request,pattern=^http://httpbin.org,script-path=http-request.js,max-size=16384,debug=true,requires-body=true
+script4 = type=dns,script-path=dns.js,debug=true
+```
 
 Each line has two components: script name and parameters. Common parameters:
 
@@ -102,15 +103,16 @@ You may use $httpAPI to call all HTTP APIs to control Surge's functions. No auth
 
 Start an HTTP POST request. The first parameter can be a URL or object. An example object may look like that.
 
-    {
-      url: "http://www.example.com/",
-      headers: {
-        Content-Type: "application/json"
-        },
-      body: "{}",
-      timeout: 5
-    }
-    
+```
+{
+  url: "http://www.example.com/",
+  headers: {
+    Content-Type: "application/json"
+    },
+  body: "{}",
+  timeout: 5
+}
+```
 
 When using an object as an option list. The `url` is required. If the `headers` field exists, it overwrites all existing header fields. `body` can be a string or object. When presenting an object, it is encoded to JSON string, and the 'Content-Type' is set to `application/json`.
 
@@ -142,11 +144,12 @@ You may pass a TypedArray object as a body.
 
 Also, you may use the `binary-mode` parameter to let Surge return response data in TypedArray instead of String.
 
-    {
-      url: "http://www.example.com/",
-      binary-mode: true
-    }
-    
+```
+{
+  url: "http://www.example.com/",
+  binary-mode: true
+}
+```
 
 ### Utilities
 

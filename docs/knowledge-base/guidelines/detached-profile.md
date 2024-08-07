@@ -7,17 +7,19 @@ Example:
 
 Copy
 
-    [General]
-    loglevel = notify
-    
-    [Proxy]
-    #!include Proxy1.dconf, Proxy2.dconf
-    
-    [Proxy Group]
-    #!include Group.dconf
-    
-    [Rule]
-    #!include Rule.dconf
+```
+[General]
+loglevel = notify
+
+[Proxy]
+#!include Proxy1.dconf, Proxy2.dconf
+
+[Proxy Group]
+#!include Group.dconf
+
+[Rule]
+#!include Rule.dconf
+```
 
 The referenced file must contain the corresponding section declaration with \[\]. Therefore, the file can be either a partial configuration file containing only some sections (one or more) or a complete configuration.
 
@@ -48,11 +50,13 @@ Use Case #1: The proxy service provider provides a managed configuration, and yo
 
 Copy
 
-    [Proxy]
-    #!include ManagedProfile.conf
-    
-    [Proxy Group]
-    #!include ManagedProfile.conf
+```
+[Proxy]
+#!include ManagedProfile.conf
+
+[Proxy Group]
+#!include ManagedProfile.conf
+```
 
 Where ManagedProfile.conf is the managed configuration file name.
 
@@ -68,19 +72,21 @@ Use Case #2: Different WireGuard Peer IPs and Private Keys for multiple clients 
 
 Copy
 
-    [General]
-    loglevel = notify
-    
-    [Proxy]
-    #!include Common.conf
-    
-    [Proxy Group]
-    #!include Common.conf
-    
-    [Rule]
-    #!include Common.conf
-    
-    [WireGuard HomeServer]
-    private-key = …
+```
+[General]
+loglevel = notify
+
+[Proxy]
+#!include Common.conf
+
+[Proxy Group]
+#!include Common.conf
+
+[Rule]
+#!include Common.conf
+
+[WireGuard HomeServer]
+private-key = …
+```
 
 Since the content of the \[General\] section in Surge iOS and Mac is quite different, it is generally recommended to write them separately.

@@ -37,12 +37,13 @@ Available operators are `=,==,>=,=>,<=,=<,>,<,!,<>,AND,&&,OR,||,NOT,!,BEGINSWITH
 
 A typical example of a variable value:
 
-    CORE_VERSION: 22
-    SYSTEM: iOS
-    SYSTEM_VERSION: System Version 17.4.1 (Build 21E236)
-    DEVICE_MODEL: iPhone16,1
-    LANGUAGE: en-US
-    
+```
+CORE_VERSION: 22
+SYSTEM: iOS
+SYSTEM_VERSION: System Version 17.4.1 (Build 21E236)
+DEVICE_MODEL: iPhone16,1
+LANGUAGE: en-US
+```
 
 #### Core Version
 
@@ -59,9 +60,10 @@ Expressions will be lost when modifying profile in the UI, so this feature is ma
 
 Since earlier versions than Surge iOS 5.11.0 and Mac 5.7.0 do not support this expression, both line beginning and line end notation methods are provided, allowing for flexible support of older versions. For example, if you want to use Smart Group for clients that support it, you can write:
 
-    #!REQUIREMENT CORE_VERSION>=22 Group = smart, policyA, policyB 
-    Group = url-test, policyA, policyB //!REQUIREMENT CORE_VERSION<22
-    
+```
+#!REQUIREMENT CORE_VERSION>=22 Group = smart, policyA, policyB 
+Group = url-test, policyA, policyB //!REQUIREMENT CORE_VERSION<22
+```
 
 Since the first line is treated as a pure comment in older versions, it will not take effect, and the line-end comment in the second line will also be treated as a general comment. Only the second line takes effect.
 

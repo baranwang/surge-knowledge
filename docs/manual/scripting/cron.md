@@ -17,10 +17,11 @@ Please invoke $done() to complete.
 
 A simple example:
 
-    // cron "0 2 * * *" script-path=cron.js
-    $surge.setSelectGroupPolicy('Group', 'Proxy');
-    $done();
-    
+```
+// cron "0 2 * * *" script-path=cron.js
+$surge.setSelectGroupPolicy('Group', 'Proxy');
+$done();
+```
 
 ### Additional API
 

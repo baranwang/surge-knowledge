@@ -41,31 +41,35 @@ The syntax of a module is the same as the profile. You are allowed to override t
     
     You may add metadata in a module file:
     
-          #!name=Name Here
-          #!desc=Description Here
-        
+    ```
+      #!name=Name Here
+      #!desc=Description Here
+    ```
     
     You may limit a module to specified platform. (Optional)
     
-          #!system=mac
-        
+    ```
+      #!system=mac
+    ```
     
 
 ### Examples:
 
-    #!name=MitM All Hostnames
-    #!desc=Perform MitM on all hostnames with port 443, except those to Apple and other common sites which can't be inspected. You still need to configure a CA certificate and enable the main switch of MitM.
-    
-    [MITM]
-    hostname = -*.apple.com, -*.icloud.com, -*.mzstatic.com, -*.crashlytics.com, -*.facebook.com, -*.instagram.com, *
-    
+```
+#!name=MitM All Hostnames
+#!desc=Perform MitM on all hostnames with port 443, except those to Apple and other common sites which can't be inspected. You still need to configure a CA certificate and enable the main switch of MitM.
 
-    #!name=Game Console SNAT
-    #!desc=Let Surge handle SNAT conversation properly for PlayStation, Xbox, and Nintendo Switch. Only useful if Surge Mac acts the router for these devices.
-    #!system=mac
-    [General]
-    always-real-ip = %APPEND% *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com
-    
+[MITM]
+hostname = -*.apple.com, -*.icloud.com, -*.mzstatic.com, -*.crashlytics.com, -*.facebook.com, -*.instagram.com, *
+```
+
+```
+#!name=Game Console SNAT
+#!desc=Let Surge handle SNAT conversation properly for PlayStation, Xbox, and Nintendo Switch. Only useful if Surge Mac acts the router for these devices.
+#!system=mac
+[General]
+always-real-ip = %APPEND% *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com
+```
 
 ### Requirements iOS 5.10.0+ Mac 5.6.0+
 

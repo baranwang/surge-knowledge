@@ -31,7 +31,9 @@ The DNS result presents in $request.dnsResult.
 
 A simple example:
 
-    var hostnameMatched = ($request.hostname === 'home.com');
-    var ssidMatched = ($network.wifi.ssid === 'My Home');
-    
-    $done({matched: (hostnameMatched && ssidMatched)});
+```
+var hostnameMatched = ($request.hostname === 'home.com');
+var ssidMatched = ($network.wifi.ssid === 'My Home');
+
+$done({matched: (hostnameMatched && ssidMatched)});
+```

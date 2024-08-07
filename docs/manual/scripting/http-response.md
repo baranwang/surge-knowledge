@@ -22,7 +22,9 @@ You may use $done(); to abort the request without returning anything. Or use $do
 
 A simple example:
 
-    let headers = $response.headers;
-    headers['X-Modified-By'] = 'Surge';
-    
-    $done({headers});
+```
+let headers = $response.headers;
+headers['X-Modified-By'] = 'Surge';
+
+$done({headers});
+```

@@ -7,15 +7,17 @@ Surge uses a customized DNS client to support advanced features. It may behave d
 
 Surge uses the DNS server addresses from the operating system by default. You can override them using the `dns-server` parameter.
 
-    [General]
-    dns-server = 8.8.8.8, 8.8.4.4
-    
+```
+[General]
+dns-server = 8.8.8.8, 8.8.4.4
+```
 
 Use the keyword `system` to append additional DNS servers to the system's setting. (Duplicate servers will be ignored)
 
-    [General]
-    dns-server = system, 8.8.8.8, 8.8.4.4
-    
+```
+[General]
+dns-server = system, 8.8.8.8, 8.8.4.4
+```
 
 ### Technical Detail
 

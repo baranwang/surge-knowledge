@@ -5,18 +5,20 @@ There are 3 IP-based rule types. A IP-based rule will trigger a DNS lookup if th
 
 #### IP-CIDR
 
-    IP-CIDR,192.168.0.0/16,DIRECT
-    IP-CIDR,10.0.0.0/8,DIRECT
-    IP-CIDR,172.16.0.0/12,DIRECT
-    IP-CIDR,127.0.0.1/8,DIRECT
-    
+```
+IP-CIDR,192.168.0.0/16,DIRECT
+IP-CIDR,10.0.0.0/8,DIRECT
+IP-CIDR,172.16.0.0/12,DIRECT
+IP-CIDR,127.0.0.1/8,DIRECT
+```
 
 Rule matches if the IP address of the request matches a specified range.
 
 #### IP-CIDR6
 
-    IP-CIDR6,2001:db8:abcd:8000::/50,DIRECT
-    
+```
+IP-CIDR6,2001:db8:abcd:8000::/50,DIRECT
+```
 
 Rule matches if the IPv6 address of the request matches a specified range.
 
@@ -36,9 +38,10 @@ Rule matches if the autonomous system number of the remote IP address matches.
 
 #### no-resolve
 
-    GEOIP,US,DIRECT,no-resolve
-    IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-    
+```
+GEOIP,US,DIRECT,no-resolve
+IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+```
 
 When a GEOIP or IP-CIDR rule is encountered, Surge will send a DNS query to check if the hostname of request is a domain. You can select 'no-resolve' option to skip this rule for a request with domain.
 

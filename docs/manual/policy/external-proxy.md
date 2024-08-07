@@ -7,9 +7,10 @@ The following is an example of ssh.
 
 First, the policy keyword type is `external`.
 
-    [Proxy]
-    external = external, exec = "/usr/bin/ssh", args = "11.22.33.44", args = "-D", args = "127.0.0.1:1080", local-port = 1080, addresses = 11.22.33.44
-    
+```
+[Proxy]
+external = external, exec = "/usr/bin/ssh", args = "11.22.33.44", args = "-D", args = "127.0.0.1:1080", local-port = 1080, addresses = 11.22.33.44
+```
 
 The `args` and `addresses` parameters are optional, `exec` and `local-port` are required. `args` and `addresses` fields can be repeatedly used for appending.
 

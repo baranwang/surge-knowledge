@@ -7,12 +7,13 @@ Section \[Proxy\] declares proxy policies. You can create multiple proxies for d
 
 The configuration lines example:
 
-    [Proxy]
-    ProxyHTTP = http, 1.2.3.4, 443, username, password
-    ProxyHTTPS = https, 1.2.3.4, 443, username, password
-    ProxySOCKS5 = socks5, 1.2.3.4, 443, username, password
-    ProxySOCKS5TLS = socks5-tls, 1.2.3.4, 443, username, password, skip-common-name-verify=true
-    
+```
+[Proxy]
+ProxyHTTP = http, 1.2.3.4, 443, username, password
+ProxyHTTPS = https, 1.2.3.4, 443, username, password
+ProxySOCKS5 = socks5, 1.2.3.4, 443, username, password
+ProxySOCKS5TLS = socks5-tls, 1.2.3.4, 443, username, password, skip-common-name-verify=true
+```
 
 Proxy Type
 ----------
@@ -123,12 +124,13 @@ Surge supports client certificate verification for TLS-based proxies.
 
 Example:
 
-    [Proxy]
-    Proxy = https, example.com, 443, client-cert=cert1
-    
-    [Keystore]
-    cert1 = base64=<P12 base64 string here>, password=123456
-    
+```
+[Proxy]
+Proxy = https, example.com, 443, client-cert=cert1
+
+[Keystore]
+cert1 = base64=<P12 base64 string here>, password=123456
+```
 
 Shadow TLS
 ----------
@@ -139,16 +141,18 @@ Starting from Surge iOS 5.2.0 & Surge Mac 4.10.0, Surge supports Shadow TLS v2 p
 
 Example:
 
-    [Proxy]
-    STLS-SNELL = snell, 1.2.3.4, 443, psk=pwd1, version=4, reuse=true, shadow-tls-password=pwd2
-    
+```
+[Proxy]
+STLS-SNELL = snell, 1.2.3.4, 443, psk=pwd1, version=4, reuse=true, shadow-tls-password=pwd2
+```
 
 Starting from Surge iOS 5.5.0 & Surge Mac 5.0.3, Surge supports Shadow TLS v3 protocol.
 
 Example:
 
-    STLS-SNELL = snell, 1.2.3.4, 443, psk=pwd1, version=4, reuse=true, shadow-tls-password=pwd2, shadow-tls-version=3
-    
+```
+STLS-SNELL = snell, 1.2.3.4, 443, psk=pwd1, version=4, reuse=true, shadow-tls-password=pwd2, shadow-tls-version=3
+```
 
 #### Parameters
 

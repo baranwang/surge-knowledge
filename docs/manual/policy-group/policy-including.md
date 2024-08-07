@@ -10,9 +10,10 @@ A policy group may import policies defined in an external file or from a URL.
 
 This file contains a list of policies, just like the definition lines in the main profile.
 
-    Proxy-A = https, example1.com, 443
-    Proxy-B = https, example2.com, 443
-    
+```
+Proxy-A = https, example1.com, 443
+Proxy-B = https, example2.com, 443
+```
 
 #### `update-interval`: Optional, in seconds
 
@@ -28,8 +29,9 @@ You may use this parameter to modify the parameters of external policies.
 
 For example, enabling TFO and changing the testing URL:
 
-    external-policy-modifier="test-url=http://apple.com/,tfo=true"
-    
+```
+external-policy-modifier="test-url=http://apple.com/,tfo=true"
+```
 
 Include Existing Policies iOS 4.12.0+ Mac 4.5.0+
 ------------------------------------------------

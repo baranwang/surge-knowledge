@@ -124,16 +124,20 @@ If you encounter problems with domain names in the intranet not being resolved, 
 
 Copy
 
-    [Host]
-    *.internal.example.com = server:syslib
+```
+[Host]
+*.internal.example.com = server:syslib
+```
 
 1.  Please note that the server:syslib parameter will not work when Enhanced Mode is enabled. You can use the Local DNS Mapping feature to directly hand over the intranet domain name to the intranet DNS for resolution.
     
 
 Copy
 
-    [Host]
-    *.internal.example.com = server:10.0.0.1
+```
+[Host]
+*.internal.example.com = server:10.0.0.1
+```
 
 If this domain name can also be accessed from the public network, such a configuration may cause problems. (You can solve this by using a DNS script to determine the environment)
 

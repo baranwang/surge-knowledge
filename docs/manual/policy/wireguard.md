@@ -3,18 +3,19 @@ WireGuard
 
 You can use Surge as a WireGuard client, converting L3 VPN as an outbound proxy policy.
 
-    [Proxy]
-    wireguard-home = wireguard, section-name = HomeServer
-    
-    [WireGuard HomeServer]
-    private-key = sDEZLACT3zgNCS0CyClgcBC2eYROqYrwLT4wdtAJj3s=
-    self-ip = 10.0.2.2
-    self-ip-v6 = fd00:1111::11
-    dns-server = 8.8.8.8, 2606:4700:4700::1001
-    prefer-ipv6 = false
-    mtu = 1280
-    peer = (public-key = fWO8XS9/nwUQcqnkfBpKeqIqbzclQ6EKP20Pgvzwclg=, allowed-ips = 0.0.0.0/0, endpoint = 192.168.20.6:51820)
-    
+```
+[Proxy]
+wireguard-home = wireguard, section-name = HomeServer
+
+[WireGuard HomeServer]
+private-key = sDEZLACT3zgNCS0CyClgcBC2eYROqYrwLT4wdtAJj3s=
+self-ip = 10.0.2.2
+self-ip-v6 = fd00:1111::11
+dns-server = 8.8.8.8, 2606:4700:4700::1001
+prefer-ipv6 = false
+mtu = 1280
+peer = (public-key = fWO8XS9/nwUQcqnkfBpKeqIqbzclQ6EKP20Pgvzwclg=, allowed-ips = 0.0.0.0/0, endpoint = 192.168.20.6:51820)
+```
 
 Notes for configuration:
 

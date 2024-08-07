@@ -9,15 +9,17 @@ All of these parameters are available for both built-in and proxy policies.
 
 Force to use a specified outgoing network interface.
 
-    ProxyHTTP = http, 1.2.3.4, 443, username, password, interface = en2
-    
+```
+ProxyHTTP = http, 1.2.3.4, 443, username, password, interface = en2
+```
 
 Direct policy alias supports the "interface" parameter like a proxy policy.
 
-    [Proxy]
-    Corp-VPN = direct, interface = utun0
-    WiFi = direct, interface = en2, allow-other-interface=true
-    
+```
+[Proxy]
+Corp-VPN = direct, interface = utun0
+WiFi = direct, interface = en2, allow-other-interface=true
+```
 
 Please ensure the interface has a valid route table for the destination address.
 
@@ -25,8 +27,9 @@ Please ensure the interface has a valid route table for the destination address.
 
 When the option is true, if the desired interface is unavailable, Surge is allowed to use the default interface to bind the connection. Otherwise, the connection fails directly.
 
-    ProxyHTTP = http, 1.2.3.4, 443, username, password, interface = en2, allow-other-interface=true
-    
+```
+ProxyHTTP = http, 1.2.3.4, 443, username, password, interface = en2, allow-other-interface=true
+```
 
 ### `no-error-alert` (Boolean, Default: false)
 

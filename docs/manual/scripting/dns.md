@@ -6,10 +6,11 @@ Uses a script as a DNS resolver. The value field will be used as a name.
 
 Then add a line in \[Host\] section:
 
-    [Host]
-    example.com = script:dnspod
-    *.example.com = script:dnspod
-    
+```
+[Host]
+example.com = script:dnspod
+*.example.com = script:dnspod
+```
 
 The incoming parameter is $domain.
 
@@ -24,10 +25,12 @@ When returning `address<String>` or `addresses<Array>`, an additional 'ttl' can 
 
 Here is example, which uses the public HTTP DNS API of DNSPod as a resolver for Surge:
 
-    $httpClient.get('http://119.29.29.29/d?dn=' + $domain, function(error, response, data){
-      if (error) {
-        $done({}); // Fallback to standard DND query
-      } else {
-        $done({addresses: data.split(';'), ttl: 600});
-      }
-    });
+```
+$httpClient.get('http://119.29.29.29/d?dn=' + $domain, function(error, response, data){
+  if (error) {
+    $done({}); // Fallback to standard DND query
+  } else {
+    $done({addresses: data.split(';'), ttl: 600});
+  }
+});
+```

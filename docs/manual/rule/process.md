@@ -5,8 +5,9 @@ You may assign a policy for a specified process. Process rule is available for S
 
 #### PROCESS-NAME Mac Only
 
-    PROCESS-NAME,Telegram,Proxy
-    
+```
+PROCESS-NAME,Telegram,Proxy
+```
 
 Rule matches if the process name of the request matches. Wildcard characters \* and ? are supported.
 

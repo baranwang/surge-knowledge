@@ -17,5 +17,7 @@ A subnet expression can be one of these:
 
 Rule matches if the subnet expression matches.
 
-    SUBNET,TYPE:WIRED,DIRECT
-    SUBNET,SSID:MyHome,Proxy
+```
+SUBNET,TYPE:WIRED,DIRECT
+SUBNET,SSID:MyHome,Proxy
+```

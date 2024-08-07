@@ -8,17 +8,20 @@ Please invoke $done() to complete.
 
 *   `network-changed`: Triggered when the system network changes.
 
-    // network-changed = script-path=network-changed.js,type=event,event-name=network-changed
-    
-    $notification.post('DNS Update', $network.dns.join(', '));
-    
-    $done();
-    
+```
+// network-changed = script-path=network-changed.js,type=event,event-name=network-changed
+
+$notification.post('DNS Update', $network.dns.join(', '));
+
+$done();
+```
 
 *   `notification`: Triggered when Surge shows a notification. The script can still get the message even if the notification's category is off.
 
-    // notification = script-path=notification.js,type=event,event-name=notification
-    
-    console.log($event.data);
-    
-    $done();
+```
+// notification = script-path=notification.js,type=event,event-name=notification
+
+console.log($event.data);
+
+$done();
+```

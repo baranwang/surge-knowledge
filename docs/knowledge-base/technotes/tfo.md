@@ -50,8 +50,10 @@ To address potential issues with the operating system's blackhole mechanism, Sur
 
 Copy
 
-    [SSID Setting]
-    "SSID:My Home" tfo-behaviour=force-enabled
+```
+[SSID Setting]
+"SSID:My Home" tfo-behaviour=force-enabled
+```
 
 The `tfo-behaviour` parameter has three options:
 

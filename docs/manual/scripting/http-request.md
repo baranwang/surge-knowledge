@@ -31,7 +31,9 @@ Some limitations in the current version:
 
 A simple example:
 
-    let headers = $request.headers;
-    headers['X-Modified-By'] = 'Surge';
-    
-    $done({headers});
+```
+let headers = $request.headers;
+headers['X-Modified-By'] = 'Surge';
+
+$done({headers});
+```
