@@ -20,5 +20,5 @@ https://cdn.jsdelivr.net/gh/baranwang/surge-knowledge/sitemap/manual.xml
 
 ### 已经使用的 AI
 
-[Surge Copilot for Coze](https://coze.com/store/bot/7400332229798969351)
+[Surge Copilot for Cici](https://ciciai.com/bot/RIOuXtsr)
 [Surge Copilot for Telegram](https://t.me/surge_copilot_bot)
