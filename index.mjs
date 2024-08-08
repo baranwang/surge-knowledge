@@ -138,11 +138,5 @@ async function getMarkdownBySiteMap(urlPath, key) {
 }
 
 (async () => {
-  await Promise.allSettled(
-    Object.entries({
-      manual: 'https://manual.nssurge.com/',
-      understanding: 'https://manual.nssurge.com/book/understanding-surge/en/',
-      'knowledge-base': 'https://kb.nssurge.com/surge-knowledge-base',
-    }).map(([key, url]) => getMarkdownBySiteMap(url, key))
-  );
+  await Promise.allSettled(Object.entries(JSON.parse(fs.readFileSync(path.resolve(__dirname, 'docs-map.json'), 'utf-8'))).map(([key, url]) => getMarkdownBySiteMap(url, key)));
 })();
