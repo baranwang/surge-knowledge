@@ -31,6 +31,10 @@ jobs:
       - name: Check Changes
         id: diff
         uses: tj-actions/changed-files@v44
+        with:
+          files: |
+            **.md
+            **.xml
 
       - name: Push
         if: steps.diff.outputs.any_changed == 'true'
