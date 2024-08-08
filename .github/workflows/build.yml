@@ -30,14 +30,15 @@ jobs:
 
       - name: Check Changes
         id: diff
-        uses: tj-actions/changed-files@v44
+        uses: tj-actions/verify-changed-files@v20
         with:
           files: |
             **/*.md
             **/*.xml
+            !**/node_modules/**
 
       - name: Push
-        if: steps.diff.outputs.any_changed == 'true'
+        if: steps.diff.outputs.files_changed == 'true'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
