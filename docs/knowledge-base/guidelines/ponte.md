@@ -122,6 +122,8 @@ A proxy can also be configured on the client side to access the Ponte server. Th
 
 For example, due to severe UDP packet loss during network peak hours for outbound traffic from mainland China, it is best for the client to also configure the use of the same proxy to access Ponte devices if a foreign proxy is used for NAT traversal.
 
+![](https://kb.nssurge.com/~gitbook/image?url=https%3A%2F%2F856006905-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FqrBG3qqNVELxHgiBGHTv%252Fuploads%252FenUga9dUTT4v9RWWLmqj%252Fponte-nat.png%3Falt%3Dmedia%26token%3Dd6dae434-7680-4395-9247-c3d4b0e79388&width=768&dpr=4&quality=100&sign=2a130ef1&sv=1)
+
 Vector is the underlying proxy protocol used by Surge Ponte services.
 
 ### 
