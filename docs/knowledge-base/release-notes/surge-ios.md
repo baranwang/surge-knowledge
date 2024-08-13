@@ -3,6 +3,23 @@ Surge iOS Release Notes
 
 ### 
 
+[](#version-5.12.0)
+
+Version 5.12.0
+
+*   New subscription feature: Custom policy group icons.
+    
+*   Refactor the Surge tvOS profile deployment process using CloudKit, significantly improving stability. Please note that both Surge iOS and tvOS need to be upgraded to the latest version before you can use the profile deployment feature, and the tvOS version needs to be launched once for registration.
+    
+*   When using the add rule function in the request list, you can choose to add it to an existing rule set. (Supports local rule files and inline rule sets).
+    
+*   Optimized behavior when enabling IPv6 VIF under No Default Route mode.
+    
+*   Other optimizations and bug fixes.
+    
+
+### 
+
 [](#version-5.11.3)
 
 Version 5.11.3
