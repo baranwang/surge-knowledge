@@ -3,6 +3,25 @@ Surge iOS Release Notes
 
 ### 
 
+[](#version-5.13.0)
+
+Version 5.13.0
+
+*   Control Center Widget: On iOS 18, you can now quickly toggle Surge in the Control Center.
+    
+*   New Icon: Sapphire.
+    
+*   Added Ponte diagnostic function for quickly locating Ponte-related issues, accessible from the Ponte device page.
+    
+*   Port Hopping: Hysteria2 and TUIC protocol now support port hopping to improve ISP's QoS issues with UDP. See the server documentation for details.
+    
+*   Added `[General]` parameter `show-error-page`, which is used to control whether Surge's HTTP error page is displayed when an error occurs. This parameter is enabled by default, and the behavior is consistent with previous versions.
+    
+*   Bug fixes.
+    
+
+### 
+
 [](#version-5.12.0)
 
 Version 5.12.0

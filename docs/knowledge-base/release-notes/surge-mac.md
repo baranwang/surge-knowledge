@@ -3,6 +3,112 @@ Surge Mac Release Notes
 
 ### 
 
+[](#version-5.8.0)
+
+Version 5.8.0
+
+#### 
+
+[](#network-extension)
+
+Network Extension
+
+*   Due to numerous issues arising from the traditional utun takeover solution in newer system versions, starting from Surge Mac 5.8.0, Surge Mac will use Network Extension as the enhanced mode to take over the system network.
+    
+*   The minimum system version requirement for Surge Mac is raised to macOS 12.
+    
+*   Due to different required permissions, manual authorization operations is needed after updating.
+    
+*   The `vif-mode` parameter will no longer be effective.
+    
+*   Enhanced mode can now be used in conjunction with network sharing functionality, meaning you can directly create a Wi-Fi managed by Surge (requires wired network)
+    
+
+#### 
+
+[](#port-hopping)
+
+Port Hopping
+
+Hysteria2 and TUIC protocol now support port hopping to improve ISP's QoS issues with UDP. See the server documentation for details.
+
+`Proxy = hysteria2, 1.2.3.4, 443, password=pwd, port-hopping="1234;5000-6000;7044;8000-9000", port-hopping-interval=30`
+
+After configuring the `port-hopping` parameter, the primary port number configured in the front will no longer be effective.
+
+Parameters:
+
+*   `port-hopping`: Used to configure the range of ports. Separated by commas and supports ranges configured with a hyphen.
+    
+*   `port-hopping-interval`: The interval for changing port numbers. Defaults to 30 seconds
+    
+
+#### 
+
+[](#other-improvments)
+
+Other Improvments
+
+*   Due to the large amount of features requiring permissions in the new macOS system, a dedicated page has been added for managing system permissions.
+    
+*   The `syslib` keyword for local DNS mapping can now be used in enhanced mode. However, in non-enhanced mode, the resolution is entirely handled by the system. In enhanced mode, Surge resolves it using the system's DNS address.
+    
+*   Added `[General]` parameter `show-error-page`, which is used to control whether Surge's HTTP error page is displayed when an error occurs. This parameter is enabled by default, and the behavior is consistent with previous versions.
+    
+
+https://dl.nssurge.com/mac/v5/Surge-5.8.0-2900-6379c9d5240ae1555772aed2eb977e69.zip
+
+### 
+
+[](#version-5.7.5)
+
+Version 5.7.5
+
+*   The panel is now available in Surge Mac.
+    
+*   DNS Forwarding Subsystem Optimization
+    
+    *   When the domain of a DNS query is one that should not be forwarded to the public network (e.g., .home.arpa, 1.0.168.192.in-addr.arpa), it will automatically determine the upstream DNS address and only forward to LAN DNS servers.
+        
+    *   Surge can now correctly respond to PTR requests for fake IPs, meaning that using the `dig -x 198.18.23.87` command can be used to determine the original domain name corresponding to a fake IP.
+        
+    *   The DNS forwarder will now forward DNS requests to specific upstream servers based on `[Host]` section configuration.
+        
+    *   Directly respond with NOTIMP to unsupported DNS-SD PTR requests for fake IPs, without forwarding.
+        
+    
+*   When adding a rule for the current webpage, you can choose to add to an existing ruleset.
+    
+*   Bug fixes.
+    
+
+https://dl.nssurge.com/mac/v5/Surge-5.7.5-2826-4f19761fb2275ebbe2acf43907bd9371.zip
+
+### 
+
+[](#version-5.7.4)
+
+Version 5.7.4
+
+*   Due to the sudden shutdown of a public STUN server that Surge Ponte relies on, resulting in the unavailability of Surge Ponte, we have carried out an emergency replacement. Additionally, we will build our own STUN server in the future to avoid such issues.
+    
+*   Enhance compatibility with VPN and multiple network cards
+    
+    In previous versions, if the enhanced mode was enabled, all outgoing packets would be forced to use the primary interface due to Surge overriding the system's routing table. This bypassed the routing table to avoid creating a loop.
+    
+    However, this also caused issues where packets could not be sent from the correct interface in cases with multiple network cards or other VPNs.
+    
+    This version improves on that design. Now, in enhanced mode, Surge will automatically check routes and still use standard routing for TCP/UDP packets if there are higher priority sub-routes present, enhancing compatibility.
+    
+*   Fix an issue where DOMAIN-SUFFIX rules may become invalid if duplicate DOMAIN and DOMAIN-SUFFIX rules are included in the rule set.
+    
+*   Other bug fixes.
+    
+
+https://dl.nssurge.com/mac/v5/Surge-5.7.4-2806-afe67661ef616b7bbab189dec1473b68.zip
+
+### 
+
 [](#version-5.7.3)
 
 Version 5.7.3

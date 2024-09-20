@@ -3,6 +3,112 @@ Surge Mac 更新日志
 
 ### 
 
+[](#ban-ben-5.8.0)
+
+版本 5.8.0
+
+#### 
+
+[](#wang-luo-kuo-zhan)
+
+网络扩展
+
+*   鉴于传统 utun 接管方案在新系统版本中出现了诸多问题，从 Surge Mac 5.8.0 开始，Surge Mac 将使用 Network Extension 作为增强模式来接管系统网络。
+    
+*   Surge Mac 的最低系统版本要求提升至 macOS 12。
+    
+*   因为所需权限不同，更新后需要手动授权操作。
+    
+*   `vif-mode` 参数将不再有效。
+    
+*   增强模式现在可以与网络共享功能结合使用，这意味着你可以直接创建由 Surge 管理的 Wi-Fi（需要有线网络）。
+    
+
+#### 
+
+[](#duan-kou-tiao-yue)
+
+端口跳跃
+
+Hysteria2 和 TUIC 协议现在支持端口跳跃，以改善 ISP 对 UDP 的 QoS 问题。详情请参阅服务器文档。
+
+`Proxy = hysteria2, 1.2.3.4, 443, password=pwd, port-hopping="1234;5000-6000;7044;8000-9000", port-hopping-interval=30`
+
+配置 `port-hopping` 参数后，前面配置的主端口号将不再有效。
+
+参数：
+
+*   `port-h-hopping`: 用于配置端口范围。用逗号分隔，并支持用连字符配置的范围。
+    
+*   `port-hopping-interval`: 更换端口号的间隔时间。默认为30秒
+    
+
+#### 
+
+[](#qi-ta-gai-jin)
+
+其他改进
+
+*   鉴于新 macOS 系统中大量需要权限的功能，新增了一个专门用于管理系统权限的页面。
+    
+*   本地 DNS 映射中的 `syslib` 关键字现在可以在增强模式下使用。然而，在非增强模式下，解析完全由系统处理。在增强模式下，Surge 使用系统的 DNS 地址进行解析。
+    
+*   新增 `[General]` 参数 `show-error-page`, 用于控制当发生错误时是否显示 Surge 的 HTTP 错误页面。此参数默认启用，其行为与之前版本一致。
+    
+
+https://dl.nssurge.com/mac/v5/Surge-5.8.0-2900-6379c9d5240ae1555772aed2eb977e69.zip
+
+### 
+
+[](#ban-ben-5.7.5)
+
+版本 5.7.5
+
+*   面板现在可以在 Surge Mac 中使用。
+    
+*   DNS 转发子系统优化
+    
+*   当 DNS 查询的域名是不应转发到公共网络的域名（例如 .home.arpa, 1.0.168.192.in-addr.arpa）时，将自动确定上游 DNS 地址并仅转发到局域网 DNS 服务器。
+    
+*   Surge 现在可以正确响应假 IP 的 PTR 请求，这意味着使用 `dig -x 198.18.23.87` 命令可以确定与假 IP 对应的原始域名。
+    
+*   DNS 转发器现在将根据 `[Host]` 部分配置将 DNS 请求转发到特定的上游服务器。
+    
+*   对于不支持的假 IP 的 DNS-SD PTR 请求，直接以 NOTIMP 响应，而不进行转发。
+    
+*   为当前网页添加规则时，可以选择添加到现有规则集中。
+    
+*   修复了一些错误。
+    
+
+https://dl.nssurge.com/mac/v5/Surge-5.7.5-2826-4f19761fb2275ebbe2acf43907bd9371.zip
+
+### 
+
+[](#ban-ben-5.7.4)
+
+版本 5.7.4
+
+*   由于 Surge Ponte 所依赖的公共 STUN 服务器突然关闭，导致 Surge Ponte 无法使用，我们进行了紧急替换。此外，我们将在未来建立自己的 STUN 服务器，以避免此类问题。
+    
+*   增强与 VPN 和多网卡的兼容性
+    
+
+在之前的版本中，如果启用了增强模式，由于 Surge 覆盖了系统的路由表，所有出站数据包将被强制使用主接口。这绕过了路由表以避免创建循环。
+
+然而，这也导致在有多个网卡或其他 VPN 的情况下，数据包无法从正确的接口发送的问题。
+
+本版本改进了这一设计。现在，在增强模式下，如果存在更高优先级的子路由，Surge 将自动检查路由，并仍然对 TCP/UDP 数据包使用标准路由，从而提高兼容性。
+
+*   修复包含重复 DOMAIN 和 DOMAIN-SUFFIX 规则时可能导致 DOMAIN-SUFFIX 规则失效的问题。
+    
+*   其他错误修复。
+    
+
+https://dl.nssurge.com/mac/v5/Surge-5.7.4-2806-afe67661ef616b7bbab189dec1473b68.zip
+
+### 
+
 [](#ban-ben-5.7.3)
 
 版本 5.7.3
