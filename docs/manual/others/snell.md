@@ -13,13 +13,13 @@ Snell is a lean encrypted proxy protocol developed by our team. Here are some hi
 
 You can download the standalone server binary from here:
 
-[https://dl.nssurge.com/snell/snell-server-v4.1.0-linux-amd64.zip](https://dl.nssurge.com/snell/snell-server-v4.1.0-linux-amd64.zip)
+[https://dl.nssurge.com/snell/snell-server-v4.1.1-linux-amd64.zip](https://dl.nssurge.com/snell/snell-server-v4.1.1-linux-amd64.zip)
 
-[https://dl.nssurge.com/snell/snell-server-v4.1.0-linux-i386.zip](https://dl.nssurge.com/snell/snell-server-v4.1.0-linux-i386.zip)
+[https://dl.nssurge.com/snell/snell-server-v4.1.1-linux-i386.zip](https://dl.nssurge.com/snell/snell-server-v4.1.1-linux-i386.zip)
 
-[https://dl.nssurge.com/snell/snell-server-v4.1.0-linux-aarch64.zip](https://dl.nssurge.com/snell/snell-server-v4.1.0-linux-aarch64.zip)
+[https://dl.nssurge.com/snell/snell-server-v4.1.1-linux-aarch64.zip](https://dl.nssurge.com/snell/snell-server-v4.1.1-linux-aarch64.zip)
 
-[https://dl.nssurge.com/snell/snell-server-v4.1.0-linux-armv7l.zip](https://dl.nssurge.com/snell/snell-server-v4.1.0-linux-armv7l.zip)
+[https://dl.nssurge.com/snell/snell-server-v4.1.1-linux-armv7l.zip](https://dl.nssurge.com/snell/snell-server-v4.1.1-linux-armv7l.zip)
 
 The latest version is v4, which is not compatible with the previous versions like before. Please upgrade both the client (Surge iOS & Surge Mac) and the server binary.
 
