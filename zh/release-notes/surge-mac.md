@@ -1,6 +1,47 @@
 Surge Mac 更新日志
 ==============
 
+该页面的更新可能有延迟，所有版本和最新的更新可以从 Surge 的 Sparkle 更新 XML 直接获取：
+
+*   正式版本：https://www.nssurge.com/mac/v5/appcast-signed.xml
+    
+*   Beta 版本：https://www.nssurge.com/mac/v5/appcast-signed-beta.xml
+    
+
+### 
+
+[](#ban-ben-5.8.2)
+
+版本 5.8.2
+
+*   修复启用 `gateway-restricted-to-lan` 参数时 IPv6 VIF 无法接管请求的问题。
+    
+*   对 `use-application-dns.net` 的 DNS 查询将返回 NXDOMAIN，导致 Firefox 自动禁用应用程序 DNS（即 DoH）。直接在浏览器中使用加密 DNS 会阻止 Surge 正确获取请求的域名。
+    
+*   错误修复和小幅改进。
+    
+
+https://dl.nssurge.com/mac/v5/Surge-5.8.2-2946-b739968f1d90da3b755d3bf82941e8c2.zip
+
+### 
+
+[](#ban-ben-5.8.1)
+
+版本 5.8.1
+
+*   新参数：proxy-restricted-to-lan/gateway-restricted-to-lan 一些用户由于缺乏网络安全知识，意外地将代理和网关服务暴露在互联网上（例如，配置了 DMZ）。因此，添加了这两个参数以限制代理和网关服务仅接受来自当前子网的设备。这两个参数默认启用。
+    
+*   修复增强模式与 PPPoE 直接拨号之间的兼容性。
+    
+*   支持使用 ETag 避免在请求外部资源时下载重复数据。
+    
+*   Surge 现在支持处理系统的 DNS 搜索域设置。
+    
+*   其他错误修复和兼容性改进。
+    
+
+https://dl.nssurge.com/mac/v5/Surge-5.8.1-2929-5220af95366dfacec7ca84cb8ddd122c.zip
+
 ### 
 
 [](#ban-ben-5.8.0)

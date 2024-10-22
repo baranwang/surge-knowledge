@@ -1,6 +1,44 @@
 Surge Mac Release Notes
 =======================
 
+All versions and the latest updates can be directly obtained from Surge's Sparkle update XML.
+
+Release version: https://www.nssurge.com/mac/v5/appcast-signed.xml Beta version: https://www.nssurge.com/mac/v5/appcast-signed-beta.xml
+
+### 
+
+[](#version-5.8.2)
+
+Version 5.8.2
+
+*   Fix the issue where IPv6 VIF cannot take over requests when the `gateway-restricted-to-lan` parameter is enabled.
+    
+*   DNS lookup of `use-application-dns.net` will return NXDOMAIN, causing Firefox to automatically disable application DNS, (i.e., DoH). Using encrypted DNS directly in the browser will prevent Surge from correctly obtaining the requested domain names.
+    
+*   Bug fixes and minor improvements.
+    
+
+https://dl.nssurge.com/mac/v5/Surge-5.8.2-2946-b739968f1d90da3b755d3bf82941e8c2.zip
+
+### 
+
+[](#version-5.8.1)
+
+Version 5.8.1
+
+*   New parameters: proxy-restricted-to-lan/gateway-restricted-to-lan It has been found that some users, due to a lack of understanding of network security knowledge, accidentally expose proxy and gateway services to the Internet (e.g., configured DMZ). Therefore, these two parameters have been added to restrict proxy and gateway services to only accept devices from the current subnet. These two parameters are enabled by default.
+    
+*   Fix the compatibility between enhanced mode and PPPoE direct dialing.
+    
+*   Support using ETag to avoid downloading duplicate data when requesting external resources.
+    
+*   Surge now supports handling the system's DNS search domain settings.
+    
+*   Other bug fixes and compatibility improvements.
+    
+
+https://dl.nssurge.com/mac/v5/Surge-5.8.1-2929-5220af95366dfacec7ca84cb8ddd122c.zip
+
 ### 
 
 [](#version-5.8.0)
