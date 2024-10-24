@@ -1,9 +1,12 @@
 Surge Mac Release Notes
 =======================
 
-All versions and the latest updates can be directly obtained from Surge's Sparkle update XML.
+This page may not be up-to-date. All versions and the latest updates can be directly obtained from Surge's Sparkle update XML:
 
-Release version: https://www.nssurge.com/mac/v5/appcast-signed.xml Beta version: https://www.nssurge.com/mac/v5/appcast-signed-beta.xml
+*   Release version: https://www.nssurge.com/mac/v5/appcast-signed.xml
+    
+*   Beta version: https://www.nssurge.com/mac/v5/appcast-signed-beta.xml
+    
 
 ### 
 
