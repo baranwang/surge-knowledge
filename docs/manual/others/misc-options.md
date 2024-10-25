@@ -161,6 +161,12 @@ Surge will automatically sniff the protocol for TCP requests sent to ports 80 an
 
 This parameter is of the Host List type, for detailed rules see: [Host List Parameter Type](host-list.html)
 
+### proxy-restricted-to-lan iOS 5.13.1+ Mac 5.8.1+
+
+### gateway-restricted-to-lan iOS 5.13.1+ Mac 5.8.1+
+
+It has been found that some users, due to a lack of understanding of network security knowledge, accidentally expose proxy and gateway services to the Internet (e.g., configured DMZ). Therefore, these two parameters have been added to restrict proxy and gateway services to only accept devices from the current subnet. These two parameters are enabled by default.
+
 Surge iOS Only Parameters
 -------------------------
 
