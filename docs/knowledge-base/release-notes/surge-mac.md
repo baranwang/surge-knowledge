@@ -10,6 +10,59 @@ This page may not be up-to-date. All versions and the latest updates can be dire
 
 ### 
 
+[](#version-5.9.0)
+
+Version 5.9.0
+
+### 
+
+[](#new-features)
+
+New Features
+
+*   Added pre-matching rules for low-overhead request rejection. Please refer to the documentation for details. https://manual.nssurge.com/policy/reject.html
+    
+*   Body Rewrite supports using JQ expressions to manipulate JSON.
+    
+*   The shadowsocks protocol adds support for the `2022-blake3-aes-256-gcm` and `2022-blake3-aes-128-gcm` encryption modes
+    
+
+### 
+
+[](#improvements)
+
+Improvements
+
+*   The URL-REGEX rule now supports `extended-matching` tags.
+    
+*   Allow the use of Ponte policy as an underlying proxy.
+    
+*   Modify the termination logic of HTTP scripts. If a request needs to be interrupted, use $done({abort: true}). Other failures will not modify or terminate the request.
+    
+*   Overall optimization and improvement of UDP forwarding.
+    
+
+### 
+
+[](#bug-fixes)
+
+Bug Fixes
+
+*   Fix the issue where DNS requests cannot select the correct interface according to the routing table in enhanced mode.
+    
+*   Fix the issue of not being able to obtain system routes on macOS 12.
+    
+*   Fix the issue where determining the existence of IPv6 might be incorrect in some cases.
+    
+*   Fix the issue where an incorrect message might sometimes indicate that the proxy settings have been modified by another program.
+    
+*   Other bug fixes.
+    
+
+https://dl.nssurge.com/mac/v5/Surge-5.9.0-3025-f8d045da66079150d4a281ed3770b3f6.zip
+
+### 
+
 [](#version-5.8.2)
 
 Version 5.8.2
@@ -550,7 +603,7 @@ Version 5.4.0
 
 #### 
 
-[](#new-features)
+[](#new-features-1)
 
 New Features
 
@@ -610,7 +663,7 @@ Optimizations
 
 #### 
 
-[](#bug-fixes)
+[](#bug-fixes-1)
 
 Bug Fixes
 

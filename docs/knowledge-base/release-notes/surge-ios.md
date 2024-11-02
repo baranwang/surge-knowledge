@@ -3,6 +3,77 @@ Surge iOS Release Notes
 
 ### 
 
+[](#version-5.14.0)
+
+Version 5.14.0
+
+#### 
+
+[](#new-features)
+
+New Features
+
+*   Added pre-matching rules for low-overhead request rejection. Please refer to the documentation for details. https://manual.nssurge.com/policy/reject.html
+    
+*   Body Rewrite supports using JQ expressions to manipulate JSON.
+    
+*   The shadowsocks protocol adds support for the `2022-blake3-aes-256-gcm` and `2022-blake3-aes-128-gcm` encryption modes
+    
+*   Adapted icon mode for iOS 18.
+    
+*   New Control Center control for HTTP capture.
+    
+*   DNS now supports system search domain settings
+    
+*   Added parameter proxy-restricted-to-lan to restrict the proxy to only accept devices from the same subnet
+    
+*   When updating external resources, ETag will be recorded and sent; re-download will not be triggered if the resource has not changed
+    
+
+#### 
+
+[](#improvements)
+
+Improvements
+
+*   Overall optimization and improvement of UDP forwarding.
+    
+*   The policy group list view supports configuring custom icons.
+    
+*   Resolved issues with real-time display on iOS 18
+    
+*   Optimized the display effect of policy group icons
+    
+*   Improved HTTP engine compatibility with non-standard requests
+    
+*   More explicit error prompts when Surge is activated without a network connection
+    
+*   Enhanced error handling logic for encrypted DNS, retrying immediately upon encountering errors
+    
+*   Added warning messages for excessive \[Host\] entries
+    
+*   The URL-REGEX rule now supports `extended-matching` tags.
+    
+*   Allow the use of Ponte policy as an underlying proxy.
+    
+
+#### 
+
+[](#bug-fixes)
+
+Bug Fixes
+
+*   Fixed an issue where Control Center/home screen widgets would still show as active even when Surge was turned off
+    
+*   Fixed a memory leak issue in encrypted DNS under certain errors
+    
+*   Corrected subscription cycle constraint errors for new icons
+    
+*   Other bug fixes
+    
+
+### 
+
 [](#version-5.13.0)
 
 Version 5.13.0
@@ -225,7 +296,7 @@ Version 5.10.0
 
 #### 
 
-[](#new-features)
+[](#new-features-1)
 
 New Features
 
@@ -234,7 +305,7 @@ New Features
 
 #### 
 
-[](#improvements)
+[](#improvements-1)
 
 Improvements
 
@@ -424,7 +495,7 @@ Version 5.8.0
 
 #### 
 
-[](#new-features-1)
+[](#new-features-2)
 
 New Features
 
@@ -494,7 +565,7 @@ Optimizations
 
 #### 
 
-[](#bug-fixes)
+[](#bug-fixes-1)
 
 Bug Fixes
 
@@ -519,7 +590,7 @@ Version 5.7.0
 
 #### 
 
-[](#new-features-2)
+[](#new-features-3)
 
 New Features
 
@@ -561,7 +632,7 @@ Minor Improvments
 
 #### 
 
-[](#bug-fixes-1)
+[](#bug-fixes-2)
 
 Bug Fixes
 
@@ -1015,7 +1086,7 @@ Other Improvements
 
 #### 
 
-[](#bug-fixes-2)
+[](#bug-fixes-3)
 
 Bug fixes
 
@@ -1147,7 +1218,7 @@ And now, you can try all the features for free for seven days before you purchas
 
 #### 
 
-[](#new-features-3)
+[](#new-features-4)
 
 New Features:
 
@@ -1510,7 +1581,7 @@ Proxy Protocol Upgrades:
 
 #### 
 
-[](#improvements-1)
+[](#improvements-2)
 
 Improvements:
 
@@ -1536,7 +1607,7 @@ Version 4.10.0 (Dec 3, 2021)
 
 #### 
 
-[](#new-features-4)
+[](#new-features-5)
 
 New Features
 
@@ -1654,7 +1725,7 @@ Surge VIF now supports the IPv6 stack for the raw TCP connections. Use parameter
 
 #### 
 
-[](#improvements-2)
+[](#improvements-3)
 
 Improvements
 

@@ -3,6 +3,77 @@ Surge iOS 更新日志
 
 ### 
 
+[](#ban-ben-5.14.0)
+
+版本 5.14.0
+
+#### 
+
+[](#xin-gong-neng)
+
+新功能
+
+*   添加了低开销请求拒绝的预匹配规则。详情请参阅文档。https://manual.nssurge.com/policy/reject.html
+    
+*   Body Rewrite 支持使用 JQ 表达式操作 JSON。
+    
+*   shadowsocks 协议新增支持 `2022-blake3-aes-256-gcm` 和 `2022-blake3-aes-128-gcm` 加密模式。
+    
+*   针对 iOS 18 的图标模式进行了适配。
+    
+*   新增用于 HTTP 捕获的控制中心控件。
+    
+*   DNS 现在支持系统搜索域设置。
+    
+*   增加参数 proxy-restricted-to-lan，以限制代理仅接受来自同一子网的设备。
+    
+*   在更新外部资源时，将记录并发送 ETag；如果资源未更改，则不会触发重新下载。
+    
+
+#### 
+
+[](#gai-jin)
+
+改进
+
+*   全面优化和改进 UDP 转发性能。
+    
+*   策略组列表视图支持配置自定义图标。
+    
+*   解决了 iOS 18 上实时显示的问题。
+    
+*   优化策略组图标的显示效果。
+    
+*   提高 HTTP 引擎对非标准请求的兼容性。
+    
+*   当 Surge 无网络连接激活时，提供更明确的错误提示信息。
+    
+*   优化加密 DNS 的错误处理逻辑，在遇到错误时立即重试。
+    
+*   对于过多 \[Host\] 条目添加警告消息。
+    
+*   URL 正则表达式规则现在支持 `extended-matching` 标签。
+    
+*   允许使用 Ponte 策略作为底层代理。
+    
+
+#### 
+
+[](#bug-xiu-fu)
+
+Bug 修复
+
+*   修复了即使 Surge 已关闭，控制中心/主屏幕小组件仍会显示为活动状态的问题。
+    
+*   修复了在某些错误情况下，加密 DNS 出现内存泄漏的问题。
+    
+*   更正新图标订阅周期约束错误。
+    
+*   其他 bug 修复。
+    
+
+### 
+
 [](#ban-ben-5.13.0)
 
 版本 5.13.0
@@ -246,7 +317,7 @@ IPv6
 
 #### 
 
-[](#xin-gong-neng)
+[](#xin-gong-neng-1)
 
 新功能
 
@@ -255,7 +326,7 @@ IPv6
 
 #### 
 
-[](#gai-jin)
+[](#gai-jin-1)
 
 改进
 
@@ -448,7 +519,7 @@ Minor Optimizations
 
 #### 
 
-[](#xin-gong-neng-1)
+[](#xin-gong-neng-2)
 
 新功能
 
@@ -543,7 +614,7 @@ Minor Optimizations
 
 #### 
 
-[](#xin-gong-neng-2)
+[](#xin-gong-neng-3)
 
 新功能
 

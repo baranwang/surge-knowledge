@@ -10,6 +10,59 @@ Surge Mac 更新日志
 
 ### 
 
+[](#version-5.9.0)
+
+Version 5.9.0
+
+### 
+
+[](#xin-gong-neng)
+
+新功能
+
+*   添加了低开销请求拒绝的预匹配规则。详情请参阅文档：https://manual.nssurge.com/policy/reject.html
+    
+*   Body Rewrite 支持使用 JQ 表达式操作 JSON。
+    
+*   shadowsocks 协议新增支持 `2022-blake3-aes-256-gcm` 和 `2022-blake3-aes-128-gcm` 加密模式。
+    
+
+### 
+
+[](#gai-jin)
+
+改进
+
+*   URL-REGEX 规则现在支持 `extended-matching` 标签。
+    
+*   允许使用 Ponte 策略作为底层代理。
+    
+*   修改 HTTP 脚本的终止逻辑。如果需要中断请求，请使用 $done({abort: true})。其他失败不会修改或终止请求。
+    
+*   全面优化和改进 UDP 转发。
+    
+
+### 
+
+[](#cuo-wu-xiu-fu)
+
+错误修复
+
+*   修复在增强模式下 DNS 请求无法根据路由表选择正确接口的问题。
+    
+*   修复 macOS 12 上无法获取系统路由的问题。
+    
+*   修正某些情况下判断 IPv6 是否存在可能不正确的问题。
+    
+*   修复有时错误提示代理设置已被其他程序修改的问题。
+    
+*   其他错误修复。
+    
+
+https://dl.nssurge.com/mac/v5/Surge-5.9.0-3025-f8d045da66079150d4a281ed3770b3f6.zip
+
+### 
+
 [](#ban-ben-5.8.2)
 
 版本 5.8.2
@@ -328,7 +381,7 @@ https://dl.nssurge.com/mac/v5/Surge-5.7.0-2724-acaafccea020f6afdc758c83057ffcbb.
 
 #### 
 
-[](#xin-gong-neng)
+[](#xin-gong-neng-1)
 
 新功能
 
@@ -555,7 +608,7 @@ https://dl.nssurge.com/mac/v5/Surge-5.4.1-2495-041f47425e9ecf56580562ce01560448.
 
 #### 
 
-[](#xin-gong-neng-1)
+[](#xin-gong-neng-2)
 
 新功能
 
