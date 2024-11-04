@@ -59,7 +59,7 @@ Customize the IP TOS value.
 
 #### `ecn` (Boolean, Default: false) iOS 5.8.0+ Mac 5.4.0+
 
-Turn on Explicit Congestion Notification if possible.
+Enable ECN (Explicit Congestion Notification) support. It can improve bandwidth performance in high packet loss environments, but enabling it in unsupported network environments may result in connection failure.
 
 ### `block-quic` iOS 5.8.0+ Mac 5.4.0+
 

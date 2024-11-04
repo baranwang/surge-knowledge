@@ -93,6 +93,7 @@ See [Snell Protocol](../others/snell.html) for more information.
 *   `obfs`: Optional. `http` or `tls`
 *   `obfs-host`: Optional.
 *   `obfs-uri`: Optional.
+*   `udp-port`: Optional. When performing UDP forwarding, use another server port number. This can be used when the server's TCP and UDP services do not listen on the same port (e.g., if ShadowTLS is configured). iOS 5.14.0+ Mac 5.9.0+
 
 #### Parameter for VMess Protocol
 
