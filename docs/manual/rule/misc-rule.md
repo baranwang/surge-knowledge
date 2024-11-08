@@ -43,6 +43,12 @@ Rule matches if the client IP address of the request matches. Only for remote ma
 SRC-IP,192.168.20.100,DIRECT
 ```
 
+The SRC-IP rule also supports CIDR notation.
+
+```
+SRC-IP,192.168.20.0、24,DIRECT
+```
+
 #### PROTOCOL
 
 Rule matches if the protocol of the request matches. The possible values are HTTP, HTTPS, TCP, UDP, DOH, DOH3, DOQ, QUIC.
