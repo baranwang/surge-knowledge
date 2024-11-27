@@ -35,7 +35,9 @@ About CPU battery consumption
 *   If a cron type script is configured and triggered frequently, it may cause additional battery consumption due to constantly waking up the CPU.
     
 
-In summary, keeping Surge iOS on has a minimal impact on battery consumption. According to our tests, under normal use, the additional consumption is less than 5% in 24 hours, so there is no need to worry.
+In summary, keeping Surge iOS on has a minimal impact on battery consumption. According to our tests, under normal use, the additional consumption is less than 2% in 24 hours, so there is no need to worry.
+
+Some users may think that Surge is very power-consuming because the percentage occupied by Surge in the system's power consumption statistics is high. Please note that this percentage refers to the proportion of total power consumed during this period attributed to Surge, not the remaining power consumed by Surge. Since Surge NE runs persistently in the background, if you have barely used your device during this period, even if Surge has only consumed a minimal amount of power, it will still be recorded as 100%.
 
 [](#surge-mac-specific-faqs)
 
@@ -94,7 +96,7 @@ If the Surge Mac Helper is abnormal, it will cause the system proxy to not be se
 
 Please follow these steps to fix:
 
-1.  Open Surge Mac's settings interface, select Advanced, and click Remove Helper.
+1.  Open Surge Mac's settings interface, select System Permissions Overview, and click Remove Helper.
     
 2.  Enter your system login password.
     
