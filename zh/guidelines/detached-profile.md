@@ -41,7 +41,7 @@ loglevel = notify
 *   引用的文件不可以再次去引用另一个文件。
     
 
-用例 #1：代理服务商提供了托管配置，仅需要其代理策略，并不想使用托管配置中的其他内容[](#yong-li-1-dai-li-fu-wu-shang-ti-gong-le-tuo-guan-pei-zhi-jin-xu-yao-qi-dai-li-ce-le-bing-bu-xiang-sh)
+用例 #1：代理服务商提供了托管配置，仅需要其代理策略，并不想使用托管配置中的其他内容[](#fsqv03g-1)
 
 1.  新建空白配置。
     
@@ -63,7 +63,7 @@ Copy
 1.  重载该配置，此时可以使用来自 ManagedProfile.conf 的策略和策略组，但是其他内容均可自由编辑。
     
 
-用例 #2：多个客户端间配置不同的 WireGuard Peer IP 和 Private Key[](#yong-li-2-duo-ge-ke-hu-duan-jian-pei-zhi-bu-tong-de-wireguard-peer-ip-he-private-key)
+用例 #2：多个客户端间配置不同的 WireGuard Peer IP 和 Private Key[](#fsqv03g-2-wireguard-peer-ip-0tr-private-key)
 
 1.  假设原配置名为 Common.conf，新建 iPhone.conf 供 iPhone 使用，新建 Mac.conf 供 MacBook 使用。
     

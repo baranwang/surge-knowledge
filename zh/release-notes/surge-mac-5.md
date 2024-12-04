@@ -66,7 +66,7 @@ Surge Ponte 是一种在运行 Surge Mac 和 iOS 设备之间的私有 mesh 网�
 
 这不仅意味着 Surge Mac 能完全承载 10GbE 网络，同时也意味着即使在低带宽占用时，CPU 电量消耗也会更低。
 
-![](https://kb.nssurge.com/~gitbook/image?url=https%3A%2F%2F3176820532-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FnRjbzkErvUl5IX5jdskH%252Fuploads%252Fgit-blob-1e14a3faf07a119b16c9d3c0f82f894ae5d7bb05%252Fmac-v5-iperf.png%3Falt%3Dmedia&width=768&dpr=4&quality=100&sign=774c3dad&sv=1)
+![](https://kb.nssurge.com/~gitbook/image?url=https%3A%2F%2F3176820532-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FnRjbzkErvUl5IX5jdskH%252Fuploads%252Fgit-blob-1e14a3faf07a119b16c9d3c0f82f894ae5d7bb05%252Fmac-v5-iperf.png%3Falt%3Dmedia&width=768&dpr=4&quality=100&sign=9842a0e0&sv=2)
 
 注：新的引擎可能产生兼容性问题，如有遇到请反馈，可配置 `legacy-vif=true` 参数使用旧引擎。
 
@@ -76,7 +76,7 @@ Surge Ponte 是一种在运行 Surge Mac 和 iOS 设备之间的私有 mesh 网�
 
 新的服务总览视图
 
-![](https://kb.nssurge.com/~gitbook/image?url=https%3A%2F%2F3176820532-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FnRjbzkErvUl5IX5jdskH%252Fuploads%252Fgit-blob-1893aa4aca5daa31bdc23bbef2a16981cbf1a3fd%252Fmac-v5-overview2.png%3Falt%3Dmedia&width=768&dpr=4&quality=100&sign=a726f940&sv=1)
+![](https://kb.nssurge.com/~gitbook/image?url=https%3A%2F%2F3176820532-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FnRjbzkErvUl5IX5jdskH%252Fuploads%252Fgit-blob-1893aa4aca5daa31bdc23bbef2a16981cbf1a3fd%252Fmac-v5-overview2.png%3Falt%3Dmedia&width=768&dpr=4&quality=100&sign=63267067&sv=2)
 
 新的服务总览视图可轻松查看 Surge 各项服务的状态，并进行控制。
 

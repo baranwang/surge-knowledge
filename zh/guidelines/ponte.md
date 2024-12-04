@@ -122,7 +122,7 @@ IP-CIDR,192.168.30.0/24,DEVICE:MyMacMini
 
 比如由于中国大陆的出境网络通常于网络高峰期会出现 UDP 流量严重丢包的现象，若使用了一个境外的代理作为 NAT 穿透，客户端最好也配置使用相同的代理访问 Ponte 设备。
 
-![](https://kb.nssurge.com/~gitbook/image?url=https%3A%2F%2F3176820532-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FnRjbzkErvUl5IX5jdskH%252Fuploads%252Fgit-blob-b602c8debd4fe5f5d4c37a15876c60d111ce0000%252Fponte-nat.png%3Falt%3Dmedia&width=768&dpr=4&quality=100&sign=7a76dd2b&sv=1)
+![](https://kb.nssurge.com/~gitbook/image?url=https%3A%2F%2F3176820532-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FnRjbzkErvUl5IX5jdskH%252Fuploads%252Fgit-blob-b602c8debd4fe5f5d4c37a15876c60d111ce0000%252Fponte-nat.png%3Falt%3Dmedia&width=768&dpr=4&quality=100&sign=c01858a&sv=2)
 
 Vector 为 Surge Ponte 服务所使用的底层代理协议。
 

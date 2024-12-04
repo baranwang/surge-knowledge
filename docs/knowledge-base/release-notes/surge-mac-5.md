@@ -66,7 +66,7 @@ In Surge Mac 5.0, Surge VIF uses a completely new working method, greatly reduci
 
 This means not only can Surge Mac fully carry a 10GbE network, but also that CPU power consumption will be lower even at low bandwidth usage.
 
-![](https://kb.nssurge.com/~gitbook/image?url=https%3A%2F%2F856006905-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FqrBG3qqNVELxHgiBGHTv%252Fuploads%252Fgit-blob-1e14a3faf07a119b16c9d3c0f82f894ae5d7bb05%252Fmac-v5-iperf.png%3Falt%3Dmedia&width=768&dpr=4&quality=100&sign=fcd750fe&sv=1)
+![](https://kb.nssurge.com/~gitbook/image?url=https%3A%2F%2F856006905-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FqrBG3qqNVELxHgiBGHTv%252Fuploads%252Fgit-blob-1e14a3faf07a119b16c9d3c0f82f894ae5d7bb05%252Fmac-v5-iperf.png%3Falt%3Dmedia&width=768&dpr=4&quality=100&sign=10892759&sv=2)
 
 Note: The new engine may cause compatibility issues, please report any issues and configure `legacy-vif=true` parameter to use the old engine if needed.
 
@@ -76,7 +76,7 @@ Note: The new engine may cause compatibility issues, please report any issues an
 
 New Service Overview View
 
-![](https://kb.nssurge.com/~gitbook/image?url=https%3A%2F%2F856006905-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FqrBG3qqNVELxHgiBGHTv%252Fuploads%252Fgit-blob-1893aa4aca5daa31bdc23bbef2a16981cbf1a3fd%252Fmac-v5-overview.png%3Falt%3Dmedia&width=768&dpr=4&quality=100&sign=8853cddf&sv=1)
+![](https://kb.nssurge.com/~gitbook/image?url=https%3A%2F%2F856006905-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FqrBG3qqNVELxHgiBGHTv%252Fuploads%252Fgit-blob-1893aa4aca5daa31bdc23bbef2a16981cbf1a3fd%252Fmac-v5-overview.png%3Falt%3Dmedia&width=768&dpr=4&quality=100&sign=f9d6d046&sv=2)
 
 The new Service Overview view makes it easy to see the status of various Surge services and control them.
 
