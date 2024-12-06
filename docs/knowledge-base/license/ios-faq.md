@@ -59,7 +59,7 @@ Common Questions
 
 ### 
 
-[](#why-can-t-i-find-the-purchased-item-when-i-try-to-restore-an-in-app-purchase)
+[](#why-cant-i-find-the-purchased-item-when-i-try-to-restore-an-in-app-purchase)
 
 Why can't I find the purchased item when I try to restore an In-App Purchase?
 
@@ -69,7 +69,7 @@ Also, the account used for In-App Purchase recovery may be the account used when
 
 ### 
 
-[](#i-lost-my-apple-id-or-the-status-is-abnormal-and-i-can-t-log-in.-can-i-transfer-the-license-binding)
+[](#i-lost-my-apple-id-or-the-status-is-abnormal-and-i-cant-log-in.-can-i-transfer-the-license-binding)
 
 I lost my Apple ID, or the status is abnormal and I can't log in. Can I transfer the license binding?
 
@@ -93,7 +93,7 @@ This error is a bug in the App Store. Please uninstall Surge iOS and reinstall i
 
 ### 
 
-[](#shouldn-t-the-license-be-valid-for-life-why-is-there-an-expiration-date-on-the-license-management-pa)
+[](#shouldnt-the-license-be-valid-for-life-why-is-there-an-expiration-date-on-the-license-management-pag)
 
 Shouldn't the license be valid for life? Why is there an expiration date on the license management page?
 
