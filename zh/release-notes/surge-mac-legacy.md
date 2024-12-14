@@ -1,3 +1,5 @@
+1.  [Release Notes](/surge-knowledge-base/zh/release-notes)
+
 Surge Mac 历史版本
 ==============
 

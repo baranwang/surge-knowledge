@@ -1,3 +1,5 @@
+1.  [Technotes](/surge-knowledge-base/zh/technotes)
+
 DNS 的本地与代理解析
 ============
 

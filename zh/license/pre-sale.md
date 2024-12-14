@@ -1,3 +1,5 @@
+1.  [License](/surge-knowledge-base/zh/license)
+
 Surge 购买前常见问题
 =============
 

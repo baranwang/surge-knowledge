@@ -1,3 +1,5 @@
+1.  [Release Notes](/surge-knowledge-base/release-notes)
+
 Surge iOS Release Notes
 =======================
 

@@ -1,3 +1,5 @@
+1.  [Technotes](/surge-knowledge-base/technotes)
+
 Local and Proxy DNS Resolution
 ==============================
 

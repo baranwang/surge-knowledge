@@ -1,3 +1,5 @@
+1.  [FAQ](/surge-knowledge-base/zh/faq)
+
 Surge Mac 重置
 ============
 

@@ -1,3 +1,5 @@
+1.  [Guidelines](/surge-knowledge-base/guidelines)
+
 Surge Ponte Guide
 =================
 

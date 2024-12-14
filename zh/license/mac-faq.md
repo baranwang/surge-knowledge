@@ -1,3 +1,5 @@
+1.  [License](/surge-knowledge-base/zh/license)
+
 Surge Mac 授权相关问题
 ================
 

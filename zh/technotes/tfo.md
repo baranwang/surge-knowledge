@@ -1,3 +1,5 @@
+1.  [Technotes](/surge-knowledge-base/zh/technotes)
+
 关于 TCP Fast Open
 ================
 

@@ -1,3 +1,5 @@
+1.  [License](/surge-knowledge-base/license)
+
 Surge Mac Licensing FAQs
 ========================
 

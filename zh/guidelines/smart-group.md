@@ -1,3 +1,5 @@
+1.  [Guidelines](/surge-knowledge-base/zh/guidelines)
+
 智能策略组
 =====
 

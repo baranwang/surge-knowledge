@@ -1,3 +1,5 @@
+1.  [Technotes](/surge-knowledge-base/zh/technotes)
+
 自动类策略组的测试策略
 ===========
 

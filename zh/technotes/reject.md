@@ -1,3 +1,5 @@
+1.  [Technotes](/surge-knowledge-base/zh/technotes)
+
 不同 REJECT 策略的区别
 ===============
 

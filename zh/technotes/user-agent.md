@@ -1,3 +1,5 @@
+1.  [Technotes](/surge-knowledge-base/zh/technotes)
+
 关于 User Agent 规则
 ================
 

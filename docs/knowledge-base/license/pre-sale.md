@@ -1,3 +1,5 @@
+1.  [License](/surge-knowledge-base/license)
+
 Surge Pre-sales FAQs
 ====================
 
