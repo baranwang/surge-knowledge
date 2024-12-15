@@ -1,3 +1,5 @@
+1.  [Release Notes](/surge-knowledge-base/release-notes)
+
 Surge Mac Legacy Versions
 =========================
 

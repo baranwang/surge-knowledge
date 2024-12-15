@@ -1,3 +1,5 @@
+1.  [License](/surge-knowledge-base/zh/license)
+
 Surge iOS 功能订阅更新说明
 ==================
 

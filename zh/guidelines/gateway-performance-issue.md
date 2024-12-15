@@ -1,3 +1,5 @@
+1.  [Guidelines](/surge-knowledge-base/zh/guidelines)
+
 Surge 网关模式性能问题排查指南
 ==================
 

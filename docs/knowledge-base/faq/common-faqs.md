@@ -1,3 +1,5 @@
+1.  [FAQ](/surge-knowledge-base/faq)
+
 Surge FAQs
 ==========
 
